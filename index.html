@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../library/style.css">
     <title>Document</title>
 </head>
 <body>
+    <header>Header</header>
+    <main class="main-content">
     <div>
         <button id="add-book-button">Add Book</button>
     </div>
+    </main>
+
+    <section id="add-book-area">
+            <form id="add-book-form" action="">
+                <h3>Add new book</h3>
+                <input type="text" placeholder="Title">
+                <input type="text" placeholder="Author">
+                <input type="number" placeholder="Number of pages">
+                <div id="have-read-area">
+                    <label for="have-you-read">Have you read?</label>
+                    <input type="checkbox" id="have-you-read">
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
+    </section>
+   
 </body>
 <script src="../library/script.js"></script>
 </html>

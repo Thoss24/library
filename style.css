@@ -5,3 +5,42 @@ html {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+.main-content {
+    display: grid;
+}
+
+#add-book-area {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(184, 20, 20, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+#add-book-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 12%;
+    min-height: 30%;
+    gap: 10px;
+}
+
+#have-read-area {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#add-book-button {
+
+}
