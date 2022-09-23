@@ -3,6 +3,7 @@ let addBookButton = document.querySelector('#add-book-button');
 addBookButton.addEventListener('click', () => {
     document.getElementById('add-book-area').style.display = 'flex';
     document.getElementById('heading').style.filter = 'blur(1px)';
+    document.querySelector('body').style.background = 'rgba(197, 196, 196, 0.5)';
     document.getElementById('main-content').style.filter = 'blur(1px)';
 });
 
@@ -12,8 +13,8 @@ cancelFormButton.addEventListener('click', () => {
     document.getElementById('add-book-area').style.display = 'none'
     document.getElementById('heading').style.filter = 'none';
     document.getElementById('main-content').style.filter = 'none';
+    document.querySelector('body').style.background = 'white';
 })
-
 
 // Array to store the books
 let myLibrary = [];
