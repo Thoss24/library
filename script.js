@@ -13,7 +13,7 @@ cancelFormButton.addEventListener('click', () => {
     document.getElementById('add-book-area').style.display = 'none'
     document.getElementById('heading').style.filter = 'none';
     document.getElementById('main-content').style.filter = 'none';
-    document.querySelector('body').style.background = 'white';
+    document.querySelector('body').style.background = 'lightgrey';
 })
 
 // Array to store the books
