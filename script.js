@@ -36,9 +36,12 @@ function addBookToLibrary() {
    let bookTitle = document.querySelector('#book-title').value;
    let bookAuthor = document.querySelector('#book-author').value;
    let bookPages = document.querySelector('#book-pages').value;
+   let haveRead = document.querySelector('#have-you-read').checked;
+   
 
-   let book = new Book(bookTitle, bookAuthor, bookPages);
+   let book = new Book(bookTitle, bookAuthor, bookPages, haveRead);
 
    myLibrary.push(book)
 }
+
 
