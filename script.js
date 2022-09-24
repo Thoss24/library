@@ -5,7 +5,11 @@ addBookButton.addEventListener('click', () => {
     document.getElementById('heading').style.filter = 'blur(1px)';
     document.querySelector('body').style.background = 'rgba(197, 196, 196, 0.5)';
     document.getElementById('main-content').style.filter = 'blur(1px)';
-});
+    });
+
+// Click event for button to add book to page
+let pushBookButton = document.querySelector('#push-book-button');
+pushBookButton.addEventListener('click', addBookToLibrary)
 
 // cancel add book form and return to normal page view also removing blur effect
 let cancelFormButton = document.querySelector('#form-cancel-button');
@@ -14,7 +18,7 @@ cancelFormButton.addEventListener('click', () => {
     document.getElementById('heading').style.filter = 'none';
     document.getElementById('main-content').style.filter = 'none';
     document.querySelector('body').style.background = 'lightgrey';
-})
+});
 
 // Array to store the books
 let myLibrary = [];
@@ -29,5 +33,12 @@ function Book(title, author, pages, read) {
 
 // Function to add book to the array (library)
 function addBookToLibrary() {
+   let bookTitle = document.querySelector('#book-title').value;
+   let bookAuthor = document.querySelector('#book-author').value;
+   let bookPages = document.querySelector('#book-pages').value;
 
+   let book = new Book(bookTitle, bookAuthor, bookPages);
+
+   myLibrary.push(book)
 }
+
