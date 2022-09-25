@@ -29,6 +29,7 @@ function checkLibrary() {
     let newBook = document.createElement('div');
 
     for (let i = 0; i < myLibrary.length; i++){
+        newBook.classList.add('book-style');
         newBook.innerHTML = myLibrary[i].title + " " + myLibrary[i].author + " " + myLibrary[i].pages + " " + myLibrary[i].read
     }
     
