@@ -48,18 +48,14 @@ body {
     padding: 20px;
 }
 
-#book-container {
+.book-container {
     display: grid;
-    grid-template-columns: repeat(auto-fil, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fil, minmax(300px, 1fr)); ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .book-style {
     display: flex;
-    height: 250px;
-    width: 250px;
     background: white;
-    margin: 10px 10px 10px 10px;
 }
 
 /* form */
