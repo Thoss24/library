@@ -1,3 +1,6 @@
+// globally defined book elements
+let bookDisplay = document.querySelector('.book-container');
+
 // bring up add book form on page and add blur effect to background
 let addBookButton = document.querySelector('#add-book-button');
 addBookButton.addEventListener('click', () => {
@@ -25,18 +28,22 @@ let myLibrary = [];
 
 // function to loop through myLibrary array
 function checkLibrary() {
-    let bookDisplay = document.querySelector('.book-container');
-    let newBook = document.createElement('div');
 
-    for (let i = 0; i < myLibrary.length; i++){
-        newBook.classList.add('book-style');
-        newBook.innerHTML = myLibrary[i].title + " " + myLibrary[i].author + " " + myLibrary[i].pages + " " + myLibrary[i].read;
-        bookDisplay.appendChild(newBook)
-    }
+    let newLibrary = myLibrary.slice(-1)
 
+    Object.keys(newLibrary).forEach(obj => {
+        let newBook = document.createElement('div');
+        bookDisplay.appendChild(newBook);
+
+        Object.keys(newLibrary[obj]).forEach(key => {
+            let bookItem = document.createElement('p');
+            bookItem.textContent = newLibrary[obj][key];
+            newBook.appendChild(bookItem);
+
+        });
+    });
 }
 checkLibrary()
-
 
 // Constructor function to hold info of book
 function Book(title, author, pages, read) {
@@ -48,12 +55,12 @@ function Book(title, author, pages, read) {
 
 // Function to add book to the array (library)
 function addBookToLibrary() {
+
    let bookTitle = document.querySelector('#book-title').value;
    let bookAuthor = document.querySelector('#book-author').value;
    let bookPages = document.querySelector('#book-pages').value;
    let haveRead = document.querySelector('#have-you-read').checked;
    
-
    let book = new Book(bookTitle, bookAuthor, bookPages, haveRead);
 
    myLibrary.push(book)

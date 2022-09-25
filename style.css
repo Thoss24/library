@@ -55,7 +55,11 @@ body {
 
 .book-style {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: white;
+    margin: 10px;
+    font-size: 30px;
 }
 
 /* form */
