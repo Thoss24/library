@@ -23,6 +23,22 @@ cancelFormButton.addEventListener('click', () => {
 // Array to store the books
 let myLibrary = [];
 
+// function to loop through myLibrary array
+function checkLibrary() {
+    let bookDisplay = document.querySelector('.book-container');
+    let newBook = document.createElement('div');
+
+    for (let i = 0; i < myLibrary.length; i++){
+        newBook.innerHTML = myLibrary[i].title + " " + myLibrary[i].author + " " + myLibrary[i].pages + " " + myLibrary[i].read
+    }
+    
+    bookDisplay.appendChild(newBook)
+
+    console.log(newBook)
+}
+checkLibrary()
+
+
 // Constructor function to hold info of book
 function Book(title, author, pages, read) {
     this.title = title,
