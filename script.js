@@ -12,7 +12,18 @@ addBookButton.addEventListener('click', () => {
 
 // Click event for button to add book to page
 let pushBookButton = document.querySelector('#push-book-button');
-pushBookButton.addEventListener('click', addBookToLibrary)
+pushBookButton.addEventListener('click', addBookToLibrary);
+pushBookButton.addEventListener('click', () => {
+    document.getElementById('add-book-area').style.display = 'none';
+    document.getElementById('heading').style.filter = 'none';
+    document.getElementById('main-content').style.filter = 'none';
+    document.querySelector('body').style.background = 'lightgrey';
+    document.getElementById('book-title').value = "";
+    document.getElementById('book-author').value = "";
+    document.getElementById('book-pages').value = "";
+    document.getElementById('have-you-read').checked = false;
+});
+pushBookButton.addEventListener('click', checkLibrary);
 
 // cancel add book form and return to normal page view also removing blur effect
 let cancelFormButton = document.querySelector('#form-cancel-button');
