@@ -45,7 +45,8 @@ function checkLibrary() {
     Object.keys(newLibrary).forEach(obj => {
         let newBook = document.createElement('div');
         bookDisplay.appendChild(newBook);
-
+        newBook.classList.add('user-book');
+    
         Object.keys(newLibrary[obj]).forEach(key => {
             if (key === 'title'|| key === 'author' || key === 'pages') {
             let bookItem = document.createElement('p');
@@ -55,9 +56,12 @@ function checkLibrary() {
                 let bookButton = document.createElement('button');
                 bookButton.textContent = newLibrary[obj][key];
                 newBook.appendChild(bookButton);
+                let removeBook = document.createElement('button');
+                newBook.appendChild(removeBook);
             }
         });
     });
+
 }
 checkLibrary()
 
