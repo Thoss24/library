@@ -88,9 +88,15 @@ body {
 
 .user-book {
     display: flex;
+    align-items: center;
     gap: 20px;
     flex-direction: column;
     background: white;
+}
+
+.remove-book {
+    width: 50%;
+    padding: 20px;
 }
 
 #have-read-area {

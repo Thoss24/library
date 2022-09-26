@@ -49,47 +49,54 @@ function checkLibrary() {
     
         Object.keys(newLibrary[obj]).forEach(key => {
             if (key === 'title'|| key === 'author' || key === 'pages') {
-            let bookItem = document.createElement('p');
-            bookItem.textContent = newLibrary[obj][key];
-            newBook.appendChild(bookItem);
-            } else if (key === 'read') {
+                let bookItem = document.createElement('p');
+                bookItem.textContent = newLibrary[obj][key];
+                newBook.appendChild(bookItem);
+            } 
+            else if (key === 'read') {
                 let bookButton = document.createElement('button');
                 bookButton.textContent = newLibrary[obj][key];
                 newBook.appendChild(bookButton);
+
                 let removeBook = document.createElement('button');
                 newBook.appendChild(removeBook);
-            }
+                removeBook.classList.add('remove-book');
+
+                removeBook.addEventListener('click', event => {
+                    event.target.parentNode.remove();
+                });
+            };
         });
     });
-
 }
 checkLibrary()
 
 // Constructor function to hold info of book
 function Book(title, author, pages, read) {
+
     this.title = title,
     this.author = author, 
     this.pages = pages,
     this.read = read
+
 }
 
 // Function to add book to the array (library)
 function addBookToLibrary() {
 
-   let bookTitle = document.querySelector('#book-title').value;
-   let bookAuthor = document.querySelector('#book-author').value;
-   let bookPages = document.querySelector('#book-pages').value;
-   let haveRead = document.querySelector('#have-you-read').checked;
-   
-   let book = new Book(bookTitle, bookAuthor, bookPages, haveRead);
+    let bookTitle = document.querySelector('#book-title').value;
+    let bookAuthor = document.querySelector('#book-author').value;
+    let bookPages = document.querySelector('#book-pages').value;
+    let haveRead = document.querySelector('#have-you-read').checked;
+    
+    let book = new Book(bookTitle, bookAuthor, bookPages, haveRead);
 
-   myLibrary.push(book)
+    myLibrary.push(book)
 }
 
 // function to check if have read is true or false
-function readOrNot() {
-    let haveRead = document.getElementById('have-you-read');
-    
+function haveRead() {
+
 }
 
 
