@@ -47,10 +47,15 @@ function checkLibrary() {
         bookDisplay.appendChild(newBook);
 
         Object.keys(newLibrary[obj]).forEach(key => {
+            if (key === 'title'|| key === 'author' || key === 'pages') {
             let bookItem = document.createElement('p');
             bookItem.textContent = newLibrary[obj][key];
             newBook.appendChild(bookItem);
-
+            } else if (key === 'read') {
+                let bookButton = document.createElement('button');
+                bookButton.textContent = newLibrary[obj][key];
+                newBook.appendChild(bookButton);
+            }
         });
     });
 }
@@ -75,6 +80,12 @@ function addBookToLibrary() {
    let book = new Book(bookTitle, bookAuthor, bookPages, haveRead);
 
    myLibrary.push(book)
+}
+
+// function to check if have read is true or false
+function readOrNot() {
+    let haveRead = document.getElementById('have-you-read');
+    
 }
 
 
