@@ -56,15 +56,15 @@ function checkLibrary() {
             else if (key === 'read') {
                 let bookButton = document.createElement('button');
                 bookButton.classList.add('read-or-not');
-                bookButton.textContent = newLibrary[obj][key]
+                bookButton.textContent = newLibrary[obj][key];
+
+                console.log(bookButton.textContent)
 
                 bookButton.addEventListener('click', () => {
-                    if (bookButton.textContent === 'true') {
-                        bookButton.textContent = 'Read';
-                        bookButton.style.background = 'green'
-                    } else if (bookButton.textContent === 'false') {
-                        bookButton.textContent = 'Not read';
-                        bookButton.style.background = 'red'
+                    if (bookButton.textContent === 'read') {
+                        bookButton.textContent = 'not read';
+                    } else if (bookButton.textContent === 'not read') {
+                        bookButton.textContent = 'read';
                     }
                     });
 
@@ -99,7 +99,7 @@ function addBookToLibrary() {
     let bookTitle = document.querySelector('#book-title').value;
     let bookAuthor = document.querySelector('#book-author').value;
     let bookPages = document.querySelector('#book-pages').value;
-    let haveRead = document.querySelector('#have-you-read').checked;
+    let haveRead = document.querySelector('#have-you-read').value;
     
     let book = new Book(bookTitle, bookAuthor, bookPages, haveRead);
 
@@ -107,9 +107,8 @@ function addBookToLibrary() {
 }
 
 function check() {
-    let checker = document.querySelector('.read-or-not');
-    let read = document.querySelector('#have-you-read');
 
-    console.log(read.checked)
+
+    
 }
 check()
