@@ -55,7 +55,19 @@ function checkLibrary() {
             } 
             else if (key === 'read') {
                 let bookButton = document.createElement('button');
-                bookButton.textContent = newLibrary[obj][key];
+                bookButton.classList.add('read-or-not');
+                bookButton.textContent = newLibrary[obj][key]
+
+                bookButton.addEventListener('click', () => {
+                    if (bookButton.textContent === 'true') {
+                        bookButton.textContent = 'Read';
+                        bookButton.style.background = 'green'
+                    } else if (bookButton.textContent === 'false') {
+                        bookButton.textContent = 'Not read';
+                        bookButton.style.background = 'red'
+                    }
+                    });
+
                 newBook.appendChild(bookButton);
 
                 let removeBook = document.createElement('button');
@@ -94,9 +106,10 @@ function addBookToLibrary() {
     myLibrary.push(book)
 }
 
-// function to check if have read is true or false
-function haveRead() {
+function check() {
+    let checker = document.querySelector('.read-or-not');
+    let read = document.querySelector('#have-you-read');
 
+    console.log(read.checked)
 }
-
-
+check()
