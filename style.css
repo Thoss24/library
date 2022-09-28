@@ -91,8 +91,13 @@ body {
     padding: 20px;
     border-radius: 15px;
     min-width: 12%;
-    min-height: 30%;
-    gap: 10px;
+    min-height: 20%;
+    gap: 15px;
+    box-shadow: 0 0 5px black;
+}
+
+#add-book-form > h3 {
+    margin: 0;
 }
 
 .user-book {
@@ -113,12 +118,18 @@ body {
 #have-read-area {
     display: flex;
     flex-direction: row;
+    gap: 5px;
 }
 
 #submit-cancel-buttons {
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+#submit-cancel-buttons > button {
+    width: 90px;
+    height: 30px
 }
 
 #have-you-read {
