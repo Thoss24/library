@@ -70,7 +70,6 @@ body {
     color: whitesmoke;
 }
 
-
 /* form */
 #add-book-area {
     display: none;
@@ -100,16 +99,6 @@ body {
     margin: 0;
 }
 
-.user-book {
-    display: flex;
-    align-items: center;
-    border-radius: 12px;
-    gap: 20px;
-    flex-direction: column;
-    background: white;
-    padding: 10px 0px 10px 0px;
-}
-
 .remove-book {
     width: 50%;
     padding: 20px;
@@ -132,12 +121,40 @@ body {
     height: 30px
 }
 
-#have-you-read {
-    
+/* library collection area */
+.user-book {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    gap: 20px;
+    flex-direction: column;
+    background: white;
+    padding: 10px 0px 10px 0px;
+    box-shadow: 0 0 2px black;
 }
 
-#form-cancel-button {
+.user-book > p {
+    margin: 0.5rem;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
 
+.read-or-not {
+    width: 50%;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.remove-book {
+    width: 50%;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 2px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 #push-book-button {

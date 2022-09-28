@@ -56,21 +56,22 @@ function checkLibrary() {
             else if (key === 'read') {
                 let bookButton = document.createElement('button');
                 bookButton.classList.add('read-or-not');
-                bookButton.textContent = newLibrary[obj][key];
+                bookButton.textContent = newLibrary[obj][key].charAt(0).toUpperCase() + newLibrary[obj][key].slice(1);
 
                 console.log(bookButton.textContent)
 
                 bookButton.addEventListener('click', () => {
-                    if (bookButton.textContent === 'read') {
-                        bookButton.textContent = 'not read';
-                    } else if (bookButton.textContent === 'not read') {
-                        bookButton.textContent = 'read';
+                    if (bookButton.textContent === 'Read') {
+                        bookButton.textContent = 'Not read';
+                    } else if (bookButton.textContent === 'Not read') {
+                        bookButton.textContent = 'Read';
                     }
                     });
 
                 newBook.appendChild(bookButton);
 
                 let removeBook = document.createElement('button');
+                removeBook.textContent = 'Remove book'
                 newBook.appendChild(removeBook);
                 removeBook.classList.add('remove-book');
 
