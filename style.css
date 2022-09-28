@@ -157,6 +157,16 @@ body {
     border: 1px solid black;
 }
 
+.read-or-not:hover {
+    border: 1px solid gray;
+}
+
+.remove-book:hover {
+    border: 1px solid black;
+    background: lightcoral;
+}
+
+
 #push-book-button {
 
 }
