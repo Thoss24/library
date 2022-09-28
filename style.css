@@ -46,11 +46,14 @@ body {
 /* main  */
 #main-content {
     padding: 20px;
+    margin: 10px;
+    gap: 20px;
 }
 
 .book-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .book-style {
@@ -61,6 +64,19 @@ body {
     margin: 10px;
     font-size: 30px;
 }
+
+#add-book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+#add-book-button {
+    height: 40px;
+    width: 60px;
+}
+
 
 /* form */
 #add-book-area {
@@ -89,9 +105,11 @@ body {
 .user-book {
     display: flex;
     align-items: center;
+    border-radius: 12px;
     gap: 20px;
     flex-direction: column;
     background: white;
+    padding: 10px 0px 10px 0px;
 }
 
 .remove-book {
@@ -115,10 +133,6 @@ body {
 }
 
 #form-cancel-button {
-
-}
-
-#add-book-button {
 
 }
 
