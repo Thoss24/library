@@ -58,7 +58,12 @@ function checkLibrary() {
                 bookButton.classList.add('read-or-not');
                 bookButton.textContent = newLibrary[obj][key].charAt(0).toUpperCase() + newLibrary[obj][key].slice(1);
 
-                console.log(bookButton.textContent)
+                if (bookButton.textContent === 'Read'){
+                    bookButton.style.background = 'rgb(87, 222, 109)'
+                } else if (bookButton.textContent === 'Not read'){
+                    bookButton.style.background = 'rgb(245, 125, 125)'
+                }
+
 
                 bookButton.addEventListener('click', () => {
                     if (bookButton.textContent === 'Read') {
@@ -106,10 +111,3 @@ function addBookToLibrary() {
 
     myLibrary.push(book)
 }
-
-function check() {
-
-
-    
-}
-check()
