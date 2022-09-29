@@ -64,12 +64,13 @@ function checkLibrary() {
                     bookButton.style.background = 'rgb(245, 125, 125)'
                 }
 
-
                 bookButton.addEventListener('click', () => {
                     if (bookButton.textContent === 'Read') {
                         bookButton.textContent = 'Not read';
+                        bookButton.style.background = 'rgb(245, 125, 125)'
                     } else if (bookButton.textContent === 'Not read') {
                         bookButton.textContent = 'Read';
+                        bookButton.style.background = 'rgb(87, 222, 109)'
                     }
                     });
 
