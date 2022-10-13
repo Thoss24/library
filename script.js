@@ -91,14 +91,19 @@ function checkLibrary() {
 checkLibrary()
 
 // Constructor function to hold info of book
-function Book(title, author, pages, read) {
-
-    this.title = title,
-    this.author = author, 
-    this.pages = pages,
-    this.read = read
-
-}
+class Book {
+    constructor( 
+        title = "unknown",
+        author = "unknown",
+        pages = "0",
+        read = "Read" 
+        ) {
+        this.title = title,
+        this.author = author, 
+        this.pages = pages,
+        this.read = read
+        }
+};
 
 // Function to add book to the array (library)
 function addBookToLibrary() {
