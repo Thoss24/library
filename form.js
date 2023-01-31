@@ -63,11 +63,11 @@ function checkPasswords() {
     passwordError.className = "error active"
 }
 
-form.addEventListener("onsubmit", (e) => {
+submitButton.addEventListener("click", (e) => {
     if (email.validity.valid && confirmPassword.value === password.value) {
         loadLibraryPage()
     };
-    loadLibraryPage()
+    // loadLibraryPage()
     e.preventDefault()
 });
 
