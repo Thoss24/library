@@ -117,3 +117,10 @@ function addBookToLibrary() {
 
     myLibrary.push(book)
 }
+
+function loadForm() {
+    window.addEventListener("load", (event) => {
+        console.log("page is fully loaded");
+      });
+}
+loadForm()
