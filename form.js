@@ -72,6 +72,6 @@ submitButton.addEventListener("click", (e) => {
 });
 
 function loadLibraryPage() {
-    location.href='../library/index.html'
+    location.href='../library/form.html'
 };
 
