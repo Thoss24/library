@@ -4,45 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../library/style.css">
+    <link rel="stylesheet" href="../library/form.css">
     <title>Document</title>
 </head>
 <body>
-    <header id="heading">
-        <div id="header-title">
-            <h1>Library</h1>
+
+    <div>
+        <h1>Sign up to use the library</h1>
+    </div>
+
+    <form action="" id="library-form-validation">
+        <div>
+            <label for="mail">Email address:</label>
+            <input type="email" id="mail" minlength="9" required>
+            <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+            <label for="country">Country of residence:</label>
+            <input type="text" id="country" required>
+            <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+            <label for="postal-code">Postal code:</label>
+            <input type="text" id="postal-code" required>
+            <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+            <label for="psw">Password:</label>
+            <input type="password" id="psw" name="psw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+            <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+            <label for="confirm-password">Confirm password:</label>
+            <input type="password" id="confirm-password" required>
+            <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div id="button-div">
+            <button id="submit-button" type="submit">Submit</button>
         </div>
         
-    </header>
-    <main id="main-content">
-        <div id="add-book-container">
-        <button id="add-book-button">Add Book</button>
-        </div>
-        <div class="book-container">
+    </form>
 
-        </div>
-    </main>
-
-    <section id="add-book-area">
-            <form id="add-book-form" action="">
-                <h3>Add new book</h3>
-                <input id="book-title" type="text" placeholder="Title" required>
-                <input id="book-author" type="text" placeholder="Author" required>
-                <input id="book-pages" type="number" placeholder="Number of pages" required>
-                <div id="have-read-area">
-                    <label for="have-you-read">Have you read?</label>
-                    <select type="checkbox" id="have-you-read">
-                        <option value="read">Read</option>
-                        <option value="not read">Not read</option>
-                    </select>
-                </div>
-                <div id="submit-cancel-buttons">
-                    <button id="push-book-button" type="button">Add Book</button>
-                    <button id="form-cancel-button" type="button">Cancel</button>
-                </div>
-            </form>
-    </section>
-   
+    <script src="../library/form.js"></script>
 </body>
-<script src="../library/script.js"></script>
 </html>
